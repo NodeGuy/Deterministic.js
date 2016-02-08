@@ -65,7 +65,6 @@ Execution produces:
 ~~~ javascript
 $ mocha test/example.js 
 
-
 Helpful compilation warnings:
  [ { ruleId: 'math-random',
     severity: 1,
