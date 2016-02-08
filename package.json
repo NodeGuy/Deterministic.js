@@ -34,11 +34,11 @@
   "author": {
     "name": "David Braun",
     "email": "David@NodeGuy.com",
-    "url": "http://www.nodeguy.com/"
+    "url": "http://www.NodeGuy.com/"
   },
   "license": "Apache-2.0",
   "bugs": {
     "url": "https://github.com/NodeGuy/Deterministic.js/issues"
   },
-  "homepage": "https://github.com/NodeGuy/Deterministic.js#readme"
+  "homepage": "http://Deterministic.js.org/"
 }
