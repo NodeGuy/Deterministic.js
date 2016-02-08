@@ -20,7 +20,7 @@
   "scripts": {
     "lint": "eslint lib test",
     "pretest": "npm run lint",
-    "test": "istanbul cover _mocha test/**/*.js",
+    "test": "istanbul cover _mocha 'test/**/*.js'",
     "posttest": "istanbul check-coverage --statements 100 --functions 100 --branches 100 --lines 100"
   },
   "repository": {
