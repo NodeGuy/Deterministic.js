@@ -13,6 +13,10 @@ It's useful for writing distributed applications in which the same code executes
 
 There are a few obvious reasons, such as the random number generator and the ability to get the current time.  Less obvious are areas of JavaScript that were underspecified in order to allow for improved performance.
 
+## How does it work?
+
+The compiler returns your JavaScript code with some parts translated to make them deterministic (e.g., [`for-in` statements](http://www.ecma-international.org/ecma-262/5.1/#sec-12.6.4)) and prepends the result with a header that overrides some of the standard library functions (such as `Math.random`).  You don't need to do anything different or learn anything new other than to know that there will be minor behavioral differences (such as `Math.random` always returning the same predictable sequence of values).  The compiler also returns warning messages to let you know which parts of your code will behave differently.  Because some native code is re-implemented in JavaScript there can be a performance penalty.
+
 # Status
 
 First we're targeting a fully deterministic version of [ECMAScript® Edition 5.1](http://www.ecma-international.org/ecma-262/5.1/).  Once we complete that we'll look at supporting the new features of [ECMAScript® 2015](http://www.ecma-international.org/ecma-262/6.0/index.html).
@@ -30,6 +34,8 @@ The compiler is usable today but the following possible sources of non-determini
 # Usage
 
 ## Installation
+
+You need to have [Node.js](https://nodejs.org/en/) already installed.
 
 `npm install deterministic`
 
