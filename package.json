@@ -1,6 +1,6 @@
 {
   "name": "deterministic",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "a deterministic version of JavaScript",
   "main": "lib/index.js",
   "directories": {
