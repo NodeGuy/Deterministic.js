@@ -13,13 +13,13 @@
     "uglify-js": "^2.6.1"
   },
   "devDependencies": {
+    "husky": "^0.11.4",
     "istanbul": "^0.4.2",
     "lodash": "^4.2.0",
     "mocha": "^2.4.5"
   },
   "scripts": {
-    "lint": "eslint lib test",
-    "pretest": "npm run lint",
+    "precommit": "eslint lib test",
     "test": "istanbul cover _mocha 'test/**/*.js'",
     "posttest": "istanbul check-coverage --statements 100 --functions 100 --branches 100 --lines 100"
   },
