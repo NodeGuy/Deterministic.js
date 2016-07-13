@@ -18,10 +18,11 @@
     "istanbul": "^0.4.2",
     "lodash": "^4.2.0",
     "mocha": "^2.4.5",
-    "publish": "^0.5.0"
+    "publish": "^0.5.0",
+    "standard": "^7.1.2"
   },
   "scripts": {
-    "precommit": "eslint lib test",
+    "precommit": "standard",
     "test": "istanbul cover _mocha 'test/**/*.js'",
     "posttest": "istanbul check-coverage --statements 100 --functions 100 --branches 100 --lines 100",
     "publish": "bundle-dependencies update && publish"
@@ -43,5 +44,16 @@
   "bugs": {
     "url": "https://github.com/NodeGuy/Deterministic.js/issues"
   },
-  "homepage": "http://Deterministic.js.org/"
+  "homepage": "http://Deterministic.js.org/",
+  "standard": {
+    "globals": [
+      "after",
+      "afterEach",
+      "before",
+      "beforeEach",
+      "describe",
+      "it",
+      "run"
+    ]
+  }
 }

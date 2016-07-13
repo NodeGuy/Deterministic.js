@@ -1,23 +1,22 @@
-'use strict';
+'use strict'
 
-var
-  name = "date-now",
-  rule = require('../../lib/ESLint rules/' + name),
-  RuleTester = require('eslint/lib/testers/rule-tester'),
+var name = 'date-now'
+var rule = require('../../lib/ESLint rules/' + name)
+var RuleTester = require('eslint/lib/testers/rule-tester')
 
-  ruleTester = new RuleTester();
+var ruleTester = new RuleTester()
 
 ruleTester.run(name, rule, {
   valid: [
-    "foo.bar()"
+    'foo.bar()'
   ],
   invalid: [
     {
-      code: "Date.now()",
+      code: 'Date.now()',
       errors: [{
-        message: "Date.now() always returns 0.",
+        message: 'Date.now() always returns 0.',
         type: 'CallExpression'
       }]
     }
   ]
-});
+})

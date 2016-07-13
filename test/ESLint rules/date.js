@@ -1,25 +1,23 @@
-'use strict';
+'use strict'
 
-var
-  name = "date",
-  rule = require('../../lib/ESLint rules/' + name),
-  RuleTester = require('eslint/lib/testers/rule-tester'),
+var name = 'date'
+var rule = require('../../lib/ESLint rules/' + name)
+var RuleTester = require('eslint/lib/testers/rule-tester')
 
-  ruleTester = new RuleTester();
+var ruleTester = new RuleTester()
 
 ruleTester.run(name, rule, {
   valid: [
-    "foobar()"
+    'foobar()'
   ],
   invalid: [
     {
-      code: "Date()",
+      code: 'Date()',
       errors: [{
-        message:
-          "When Date() is called as a function it always returns the epoch.",
+        message: 'When Date() is called as a function it always returns the epoch.',
 
         type: 'CallExpression'
       }]
     }
   ]
-});
+})

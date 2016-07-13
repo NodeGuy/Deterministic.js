@@ -1,23 +1,22 @@
-'use strict';
+'use strict'
 
-var
-  name = "math-log",
-  rule = require('../../lib/ESLint rules/' + name),
-  RuleTester = require('eslint/lib/testers/rule-tester'),
+var name = 'math-log'
+var rule = require('../../lib/ESLint rules/' + name)
+var RuleTester = require('eslint/lib/testers/rule-tester')
 
-  tester = new RuleTester();
+var tester = new RuleTester()
 
 tester.run(name, rule, {
   valid: [
-    "foo.bar()"
+    'foo.bar()'
   ],
   invalid: [
     {
-      code: "Math.log()",
+      code: 'Math.log()',
       errors: [{
-        message: "Math.log() is not yet deterministic.",
+        message: 'Math.log() is not yet deterministic.',
         type: 'CallExpression'
       }]
     }
   ]
-});
+})

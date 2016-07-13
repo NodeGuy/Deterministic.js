@@ -1,7 +1,7 @@
 module.exports = function () {
   return {
     files: [
-      { pattern: 'lib/**/*.js', instrument: true}
+      { pattern: 'lib/**/*.js', instrument: true }
     ],
 
     tests: [
@@ -14,5 +14,5 @@ module.exports = function () {
     },
 
     testFramework: 'mocha'
-  };
-};
+  }
+}

@@ -1,24 +1,22 @@
-'use strict';
+'use strict'
 
-var
-  name = "math-random",
-  rule = require('../../lib/ESLint rules/' + name),
-  RuleTester = require('eslint/lib/testers/rule-tester'),
+var name = 'math-random'
+var rule = require('../../lib/ESLint rules/' + name)
+var RuleTester = require('eslint/lib/testers/rule-tester')
 
-  tester = new RuleTester();
+var tester = new RuleTester()
 
 tester.run(name, rule, {
   valid: [
-    "foo.bar"
+    'foo.bar'
   ],
   invalid: [
     {
-      code: "Math.random",
+      code: 'Math.random',
       errors: [{
-        message:
-          "Math.random() always returns the same pseudo-random sequence.",
+        message: 'Math.random() always returns the same pseudo-random sequence.',
         type: 'MemberExpression'
       }]
     }
   ]
-});
+})
