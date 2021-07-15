@@ -1,4 +1,4 @@
-#Documentation
+# Documentation
 
 Documentation is available at [Deterministic.js.org](http://Deterministic.js.org/) and the `gh-pages` branch of this repository.
 
